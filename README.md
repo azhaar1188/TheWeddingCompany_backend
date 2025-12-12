@@ -1,4 +1,3 @@
-TheWeddingCompany Backend — FastAPI + MongoDB (Dynamic Multi-Tenant Backend)
 
 
 TheWeddingCompany Backend — FastAPI + MongoDB
