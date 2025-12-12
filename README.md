@@ -17,7 +17,7 @@ A backend service built using FastAPI + MongoDB, supporting dynamic organization
 
 **Swagger UI Execution of backend application**
 
-*Works with fastAPIs inbuilt swagger documentation at http://127.0.0.1:8000/docs*
+*Works with fastAPIs inbuilt swagger documentation at http://127.0.0.1:8000/docs after execution in local machine port*
 
 a. Logging in with Admin account
 <img width="1796" height="807" alt="image" src="https://github.com/user-attachments/assets/60704a11-ca5c-4bbd-bdb1-2010c7621098" />
