@@ -63,8 +63,7 @@ flowchart TB
     FastAPI --> MongoDB
 
     MongoDB --> Admin[Admin Collection]
-    MongoDB --> OrgA[Organization A Collection]
-    MongoDB --> OrgB[Organization B Collection]
+    MongoDB --> OrgA[Organization Collection]
 ```
 
 ## Design Choices
