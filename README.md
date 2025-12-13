@@ -1,6 +1,6 @@
 
 
-TheWeddingCompany Backend — FastAPI + MongoDB
+## TheWeddingCompany Backend — FastAPI + MongoDB
 
 A backend service built using FastAPI + MongoDB, supporting dynamic organization creation where each organization receives:
 
@@ -45,8 +45,35 @@ d. Delete the Organization (works only with Authentication)[*Here the authentica
 <img width="1768" height="500" alt="image" src="https://github.com/user-attachments/assets/7ede31f0-658d-4932-b688-1c9c34b62bcb" />
 
 
+## High-Level Architecture Diagram
 
+```mermaid
+flowchart TB
+    Client[Client / Swagger UI]
+    FastAPI[FastAPI Backend]
+    Auth[JWT Authentication]
+    Org[Organization Module]
+    Access[Org-Level Access Control]
+    MongoDB[(MongoDB)]
 
+    Client -->|HTTP Requests| FastAPI
+    FastAPI --> Auth
+    FastAPI --> Org
+    FastAPI --> Access
+    FastAPI --> MongoDB
+
+    MongoDB --> Admin[Admin Collection]
+    MongoDB --> OrgA[Organization A Collection]
+    MongoDB --> OrgB[Organization B Collection]
+```
+
+## Design Choices
+
+- **FastAPI** is used for its high performance and automatic Swagger UI support.
+- **MongoDB** enables flexible schemas and dynamic organization-specific collections.
+- **JWT-based authentication** ensures secure, stateless access to protected endpoints.
+- **Dedicated collections per organization** provide data isolation and better access control.
+- **Swagger UI** allows easy testing of authentication and CRUD operations.
 
 
 
